@@ -13,10 +13,11 @@
   "homepage": "https://github.com/linonetwo/sensitive-words-js",
   "scripts": {
     "test": "mocha",
-    "lint": "tsc && eslint lib/**/*.ts",
-    "format": "eslint lib/**/*.ts --fix",
+    "lint": "tsc && eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
     "clean": "rm -rf dist-ts dist",
     "build": "npm run clean && tsc -p tsconfig-build.json && rollup -c && node -r esbuild-register bundle-types",
+    "generate-barrels": "barrelsby --delete --location all --singleQuotes --directory ./src --exclude .+\\.d\\.ts && dprint fmt **/*/index.ts",
     "prepublishOnly": "npm run build",
     "semantic-release": "semantic-release"
   },
@@ -26,18 +27,21 @@
   "license": "MIT",
   "devDependencies": {
     "@microsoft/api-extractor": "7.36.0",
+    "@rollup/plugin-node-resolve": "15.1.0",
     "@types/chai": "4.3.5",
     "@types/mocha": "10.0.1",
     "@types/node": "18.16.18",
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
+    "barrelsby": "^2.8.0",
     "chai": "4.3.7",
+    "dprint": "^0.37.1",
     "esbuild": "0.18.10",
     "esbuild-register": "3.4.2",
     "eslint": "8.43.0",
+    "eslint-config-tidgi": "^1.1.1",
     "mocha": "10.2.0",
     "rollup": "3.25.3",
-    "@rollup/plugin-node-resolve": "15.1.0",
     "semantic-release": "21.0.3",
     "typescript": "5.1.3"
   },
@@ -47,5 +51,8 @@
       "esbuild-register"
     ],
     "spec": "lib/**/*-test.ts"
+  },
+  "dependencies": {
+    "mint-filter": "^4.0.3"
   }
 }
