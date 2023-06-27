@@ -5,6 +5,9 @@
     "noEmit": false,
     "module": "es6"
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
     "node_modules",
     "**/*-test.ts"
