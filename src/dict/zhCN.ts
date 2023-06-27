@@ -1,4 +1,4 @@
-export const defaultDict = [
+export const zhCN = [
   "毛泽东",
   "周恩来",
   "刘少奇",

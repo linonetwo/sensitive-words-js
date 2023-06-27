@@ -1,4 +1,4 @@
 import { Mint } from 'mint-filter';
-import { defaultDict } from './dict';
+import { zhCN } from './dict';
 
-export const filter = new Mint(defaultDict);
+export const filter = new Mint(zhCN);

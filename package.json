@@ -1,28 +1,38 @@
 {
   "name": "sensitive-words-js",
   "version": "0.0.1",
-  "description": "",
+  "description": "敏感词库，配合 ming-filter 使用，避免机器人说话被夹。",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "exports": {
-    "require": "./dist/index.js",
     "default": "./dist/index-esm.mjs"
   },
+  "type": "module",
   "packageManager": "pnpm@7.9.3",
   "repository": "git@github.com:reconbot/typescript-library-template.git",
   "homepage": "https://github.com/linonetwo/sensitive-words-js",
   "scripts": {
+    "build": "npm run clean && tsc -p tsconfig-build.json",
+    "build-bundle": "npm run clean && tsc -p tsconfig-build.json --outDir dist-ts && rollup -c && node -r esbuild-register bundle-types",
+    "generate-barrels": "barrelsby --delete --location all --singleQuotes --directory ./src --exclude .+\\.d\\.ts && dprint fmt **/*/index.ts",
     "test": "mocha",
     "lint": "tsc && eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
-    "clean": "rm -rf dist-ts dist",
-    "build": "npm run clean && tsc -p tsconfig-build.json && rollup -c && node -r esbuild-register bundle-types",
-    "generate-barrels": "barrelsby --delete --location all --singleQuotes --directory ./src --exclude .+\\.d\\.ts && dprint fmt **/*/index.ts",
+    "clean": "rimraf dist-ts dist",
     "prepublishOnly": "npm run build",
     "semantic-release": "semantic-release"
   },
   "keywords": [
-    "typescript-library-template"
+    "敏感词",
+    "屏蔽词",
+    "过滤器",
+    "sensitive",
+    "sensitive words",
+    "offensive",
+    "political",
+    "mint-filter",
+    "chinese",
+    "filter"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -41,6 +51,7 @@
     "eslint": "8.43.0",
     "eslint-config-tidgi": "^1.1.1",
     "mocha": "10.2.0",
+    "rimraf": "^5.0.1",
     "rollup": "3.25.3",
     "semantic-release": "21.0.3",
     "typescript": "5.1.3"
@@ -53,6 +64,7 @@
     "spec": "lib/**/*-test.ts"
   },
   "dependencies": {
-    "mint-filter": "^4.0.3"
+    "mint-filter": "^4.0.3",
+    "tslib": "^2.6.0"
   }
 }
