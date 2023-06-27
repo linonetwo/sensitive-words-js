@@ -1,6 +1,6 @@
 {
   "name": "sensitive-words-js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "敏感词库，配合 ming-filter 提供检测，避免机器人说话被夹。Sensitive word database, used with ming-filter to avoid bots get blocked.",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
@@ -13,9 +13,12 @@
     "README.md",
     "package.json"
   ],
+  "author": {
+    "name": "linonetwo"
+  },
   "type": "module",
   "packageManager": "pnpm@7.9.3",
-  "repository": "git@github.com:reconbot/typescript-library-template.git",
+  "repository": "git@github.com:linonetwo/sensitive-words-js.git",
   "homepage": "https://github.com/linonetwo/sensitive-words-js",
   "scripts": {
     "build": "npm run clean && tsc -p tsconfig-build.json",
