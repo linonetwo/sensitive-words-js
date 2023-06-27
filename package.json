@@ -1,14 +1,14 @@
 {
   "name": "sensitive-words-js",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "敏感词库，配合 ming-filter 提供检测，避免机器人说话被夹。Sensitive word database, used with ming-filter to avoid bots get blocked.",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "exports": {
-    "default": "./dist/index-esm.mjs"
+    "default": "./dist/index.js"
   },
   "files": [
-    "dist/src/",
+    "dist",
     "LICENSE",
     "README.md",
     "package.json"
