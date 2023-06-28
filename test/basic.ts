@@ -4,6 +4,7 @@ import { filter } from '../src';
 describe('filter', () => {
   it('filter', () => {
     assert.deepEqual(filter.filter('一次性交纳百元').words, ['性交']);
+    assert.deepEqual(filter.filter('使用j avascript开发插件').words, ['av', '插']);
     assert.deepEqual(filter.filter('三大全国性交易市场布局渝中').words, ['性交', '性交易']);
     assert.deepEqual(filter.filter('阿拉斯加遭强暴风雪袭击致XX人死亡').words, ['阿拉', '强暴']);
     assert.deepEqual(filter.filter('杭州市长春药店').words, ['春药']);
