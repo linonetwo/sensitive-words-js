@@ -17,7 +17,7 @@
     "name": "linonetwo"
   },
   "type": "module",
-  "packageManager": "pnpm@7.9.3",
+  "packageManager": "pnpm@8.6.9",
   "repository": "git@github.com:linonetwo/sensitive-words-js.git",
   "homepage": "https://github.com/linonetwo/sensitive-words-js",
   "scripts": {
