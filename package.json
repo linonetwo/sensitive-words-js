@@ -55,7 +55,7 @@
     "barrelsby": "^2.8.0",
     "chai": "4.3.7",
     "dprint": "^0.37.1",
-    "esbuild": "0.18.10",
+    "esbuild": "0.18.14",
     "esbuild-register": "3.4.2",
     "eslint": "8.43.0",
     "eslint-config-tidgi": "^1.1.1",
